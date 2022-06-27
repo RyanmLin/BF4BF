@@ -218,6 +218,8 @@ GameObject:
   - component: {fileID: 1467500868}
   - component: {fileID: 1467500871}
   - component: {fileID: 1467500870}
+  - component: {fileID: 1467500873}
+  - component: {fileID: 1467500872}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -327,6 +329,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1467500872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467500867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4d4c09a41f73741b6c99689ee81009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1467500873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467500867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed43ab409aeb2b64694acb595b837e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1850796164
 GameObject:
   m_ObjectHideFlags: 0
