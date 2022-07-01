@@ -8,14 +8,14 @@ public class InGameControls : MonoBehaviour
     public InputManager inputActions; // Control Reference
 
     // Script References
-    private EggController eggController;
+    private EggMovement eggMovement;
 
     // Input State Variables
     private float verticalAxis;
 
     void Awake()
     {
-        eggController = GetComponent<EggController>();
+        eggMovement = GetComponent<EggMovement>();
 
         verticalAxis = 0f;
         inputActions = new InputManager();
@@ -25,12 +25,16 @@ public class InGameControls : MonoBehaviour
     {
         inputActions.Enable();
         
-        inputActions.Player.HorizontalMovement.performed += OnMoveInput;
+        inputActions.Player.HorizontalMovement.performed    += OnMoveInput;
+        inputActions.Player.HorizontalMovement.canceled     += OnMoveCancel;
+        inputActions.Player.Jump.performed                  += OnJumpInput;
     }
 
     private void OnDisable()
     {
-        inputActions.Player.HorizontalMovement.performed -= OnMoveInput;
+        inputActions.Player.HorizontalMovement.performed    -= OnMoveInput;
+        inputActions.Player.HorizontalMovement.canceled     -= OnMoveCancel;
+        inputActions.Player.Jump.performed                  -= OnJumpInput;
 
         inputActions.Disable();
     }
@@ -51,10 +55,29 @@ public class InGameControls : MonoBehaviour
             value = 0f;
         }
 
-        if(eggController != null)
+        if (eggMovement != null) 
         {
-            eggController.Move(value);
+            eggMovement.Move(value);
         }
+    }
 
+    private void OnMoveCancel(InputAction.CallbackContext context)
+    {
+        var value = context.ReadValue<float>();
+
+        if(eggMovement != null)
+        {
+            eggMovement.Move(0f);
+        }
+    }
+
+    private void OnJumpInput(InputAction.CallbackContext context)
+    {
+        var value = context.ReadValue<float>();
+
+        if(eggMovement != null)
+        {
+            eggMovement.Jump();
+        }
     }
 }
