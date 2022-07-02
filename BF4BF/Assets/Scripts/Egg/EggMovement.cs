@@ -12,7 +12,7 @@ public class EggMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,7 +26,6 @@ public class EggMovement : MonoBehaviour
         // Player Movement
         eggController.Move(horizontalMovementF, jumpB);
         jumpB = false;
-
     }
 
     public void Move(float axisValF)
