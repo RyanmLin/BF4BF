@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7712746414426416873}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StartPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7712746414426416874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.116, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.755, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7712746414858002334}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7712746414858002304}
   - component: {fileID: 7712746414858002305}
   - component: {fileID: 7712746414858002306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lvl_1_Moving_Plat_UD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7712746414858002307}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 127.06, y: -0.66, z: 0}
   m_LocalScale: {x: 4.8, y: 4.8, z: 4.8}
   m_Children:
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7712746415471651537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EndPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

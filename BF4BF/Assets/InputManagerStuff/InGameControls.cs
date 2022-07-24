@@ -10,6 +10,7 @@ public class InGameControls : MonoBehaviour
     // Script References
     private EggMovement eggMovement;
     private TadpoleMovement tadpoleMovement;
+    private PauseMenuController pauseMenu;
 
     // Input State Variables
     private float verticalAxis;
@@ -18,6 +19,7 @@ public class InGameControls : MonoBehaviour
     {
         eggMovement = GetComponent<EggMovement>();
         tadpoleMovement = GetComponent<TadpoleMovement>();
+        pauseMenu = GetComponent<PauseMenuController>();
 
         verticalAxis = 0f;
         inputActions = new InputManager();
@@ -32,6 +34,7 @@ public class InGameControls : MonoBehaviour
         inputActions.Player.VerticalMovement.performed      += OnRiseInput;
         inputActions.Player.VerticalMovement.canceled       += OnRiseCancel;
         inputActions.Player.Jump.performed                  += OnJumpInput;
+        inputActions.Player.Pause.performed                 += OnPauseInput;
     }
 
     private void OnDisable()
@@ -41,6 +44,7 @@ public class InGameControls : MonoBehaviour
         inputActions.Player.VerticalMovement.performed      -= OnRiseInput;
         inputActions.Player.VerticalMovement.canceled       -= OnRiseCancel;
         inputActions.Player.Jump.performed                  -= OnJumpInput;
+        inputActions.Player.Pause.performed                 -= OnPauseInput;
 
         inputActions.Disable();
     }
@@ -126,6 +130,16 @@ public class InGameControls : MonoBehaviour
         if(eggMovement != null)
         {
             eggMovement.Jump();
+        }
+    }
+
+    private void OnPauseInput(InputAction.CallbackContext context)
+    {
+        var value = context.ReadValue<float>();
+
+        if(pauseMenu != null)
+        {
+            pauseMenu.Pause();
         }
     }
 }
