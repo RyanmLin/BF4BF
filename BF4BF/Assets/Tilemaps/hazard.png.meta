@@ -5,11 +5,26 @@ TextureImporter:
   - first:
       213: 5033953136192624500
     second: hazard_0
+  - first:
+      213: -3742559000948365666
+    second: hazard_1
+  - first:
+      213: -1912403386857857355
+    second: hazard_2
+  - first:
+      213: -299689418150380913
+    second: hazard_3
+  - first:
+      213: -2004726019746648641
+    second: hazard_4
+  - first:
+      213: -8604974630334971530
+    second: hazard_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0

@@ -14,6 +14,7 @@ public class EggController : MonoBehaviour
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	private Rigidbody2D m_Rigidbody2D;
+    private Animator anim;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
@@ -30,7 +31,7 @@ public class EggController : MonoBehaviour
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
+        anim = GetComponent<Animator>();
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 
@@ -39,6 +40,7 @@ public class EggController : MonoBehaviour
 	private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
+		anim.SetBool("onGround", m_Grounded);
 		m_Grounded = false;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
