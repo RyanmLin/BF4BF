@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenuController : MonoBehaviour
 {
     public string mainMenuScene;
     public GameObject pauseMenu;
     public bool isPaused;
+
+    public GameObject pauseFirstButton;
+    public GameObject optionsFirstButton; // don't need
+    public GameObject optionsClosedButton; // don't need
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +33,13 @@ public class PauseMenuController : MonoBehaviour
             ResumeGame();
         }
         else
-        {
+        { // Pause Activated
             isPaused = true;
             pauseMenu.SetActive(isPaused);
             Time.timeScale = 0f;
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
     }
 
