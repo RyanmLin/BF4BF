@@ -396,7 +396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 173202393}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1044335180}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &173202393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,7 +1971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1291173235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2102,7 +2114,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1340822376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1044335180}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: ReturnToMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1340822376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2711,7 +2735,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1908172315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1044335180}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1908172315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23586,6 +23622,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 564564138}
     m_Modifications:
+    - target: {fileID: 7712746414858002305, guid: c6922196052e89a4ca9b8fa7b3f5d296, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7086293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712746414858002305, guid: c6922196052e89a4ca9b8fa7b3f5d296, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16720751
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712746414858002305, guid: c6922196052e89a4ca9b8fa7b3f5d296, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0014652908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712746414858002305, guid: c6922196052e89a4ca9b8fa7b3f5d296, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0011525005
+      objectReference: {fileID: 0}
     - target: {fileID: 7712746414858002307, guid: c6922196052e89a4ca9b8fa7b3f5d296, type: 3}
       propertyPath: m_Name
       value: Lvl_1_Moving_Plat_UD

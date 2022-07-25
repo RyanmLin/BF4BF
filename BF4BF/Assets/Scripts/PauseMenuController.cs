@@ -25,23 +25,31 @@ public class PauseMenuController : MonoBehaviour
     {
         if(isPaused)
         {
-            isPaused = false;
-            pauseMenu.SetActive(isPaused);
+            ResumeGame();
         }
         else
         {
             isPaused = true;
             pauseMenu.SetActive(isPaused);
+            Time.timeScale = 0f;
         }
     }
 
     public void ResumeGame()
     {
-
+        isPaused = false;
+        pauseMenu.SetActive(isPaused);
+        Time.timeScale = 1f;
     }
 
     public void ReturnToMain()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuScene);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
